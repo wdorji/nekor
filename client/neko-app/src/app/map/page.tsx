@@ -20,14 +20,14 @@ function MainMap() {
     difficulty: "easy",
   };
 
-  const nekoID = window.location.toString().split("=")[1];
-
   const [nekor, setNekor] = useState<INekor>();
 
   const [appLoaded, setAppLoaded] = useState(false);
 
   const loadNekor = useCallback(async () => {
-    const nekorsResp = await FrontendNekorGateway.getNekor(nekoID);
+    const nekorsResp = await FrontendNekorGateway.getNekor(
+      window.location.toString().split("=")[1]
+    );
 
     if (nekorsResp.success) {
       nekorsResp.payload && setNekor(nekorsResp.payload);

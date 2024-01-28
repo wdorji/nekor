@@ -219,7 +219,7 @@ function MapboxMap(props: mapProps) {
     return () => {
       mapboxMap.remove();
     };
-  }, [nekoCenter]);
+  }, [curNekoPoints, nekoCenter, nekor.route.nekorRoute]);
 
   function openNav(curTitle: string, curImgPath: string, curDesc: string) {
     document.getElementById("mySidebar")!.style.width = isMobile
