@@ -4,8 +4,6 @@ import {
   IServiceResponse,
   successfulServiceResponse,
   INekor,
-  INekorPoint,
-  INekorRoute,
   isINekor,
 } from "../types";
 import { NekorCollectionConnection } from "./NekorCollectionConnection";

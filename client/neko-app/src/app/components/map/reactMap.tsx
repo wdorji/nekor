@@ -1,17 +1,9 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import mapboxgl, {
-  maxParallelImageRequests,
-  LngLat,
-  GeoJSONSourceRaw,
-  MapboxGeoJSONFeature,
-  Popup,
-  Map,
-} from "mapbox-gl";
-import { Feature, FeatureCollection } from "geojson";
+import mapboxgl, { LngLat } from "mapbox-gl";
+import { FeatureCollection } from "geojson";
 import "mapbox-gl/dist/mapbox-gl.css";
-import { Stack, Progress, Text } from "@chakra-ui/react";
 import { INekor } from "@/app/types";
 
 type mapProps = {
@@ -19,18 +11,16 @@ type mapProps = {
 };
 
 function MapboxMap(props: mapProps) {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-  const [height, setHeight] = useState<number>(window.innerHeight);
-  const isMobile = width <= 768;
+  const isMobile = window.innerWidth <= 768;
   // this is where the map instance will be stored after initialization
   const nekor = props.nekor;
   const [map, setMap] = useState<mapboxgl.Map>();
 
+  map;
+
   const curNekoPoints = nekor.points;
 
   const startPoint = curNekoPoints[0];
-
-  const endPoint = curNekoPoints[curNekoPoints.length - 1];
 
   const [nekoCenter, setNekoCenter] = useState([
     startPoint.long,
@@ -192,7 +182,7 @@ function MapboxMap(props: mapProps) {
       description: string,
       markerType: string
     ) {
-      var el = document.createElement("div");
+      const el = document.createElement("div");
       el.id = markerType;
       el.addEventListener("click", function (e) {
         e.stopPropagation();
@@ -203,7 +193,7 @@ function MapboxMap(props: mapProps) {
       new mapboxgl.Marker(el).setLngLat(new LngLat(long, lat)).addTo(mapboxMap);
     }
 
-    for (let item of curNekoPoints) {
+    for (const item of curNekoPoints) {
       addPopup(
         +item.long,
         +item.lat,

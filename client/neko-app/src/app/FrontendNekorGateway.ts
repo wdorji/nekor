@@ -1,5 +1,5 @@
 import { failureServiceResponse, INekor, IServiceResponse } from "./types";
-import { endpoint, get, post, put, remove } from "./global";
+import { endpoint, get, post, remove } from "./global";
 
 /** In development mode (locally) the server is at localhost:8000*/
 const baseEndpoint = endpoint;

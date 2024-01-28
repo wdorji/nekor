@@ -20,7 +20,7 @@ function MainMap() {
     difficulty: "easy",
   };
 
-  const [nekor, setNekor] = useState<INekor>();
+  const [nekor, setNekor] = useState<INekor>(placeholderNekor);
 
   const [appLoaded, setAppLoaded] = useState(false);
 

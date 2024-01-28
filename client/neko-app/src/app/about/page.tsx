@@ -1,15 +1,9 @@
 "use client";
 
-import { useState } from "react";
-import {
-  ParallaxProvider,
-  Parallax,
-  ParallaxBanner,
-} from "react-scroll-parallax";
+import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 
 export default function About() {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-  const isMobile = width <= 768;
+  const isMobile = window.innerWidth <= 768;
 
   interface PanelProps {
     imageUrl: string;

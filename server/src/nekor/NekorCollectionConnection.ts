@@ -1,13 +1,11 @@
 import {
   INekor,
-  INekorPoint,
-  INekorRoute,
   IServiceResponse,
   failureServiceResponse,
   isINekor,
   successfulServiceResponse,
 } from "../types";
-import { MongoClient, SortOptionObject } from "mongodb";
+import { MongoClient } from "mongodb";
 
 /**
  * NekorCollectionConnection acts as an in-between communicator between

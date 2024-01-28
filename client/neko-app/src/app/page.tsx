@@ -2,21 +2,16 @@
 
 import {
   Stack,
-  Button,
   Box,
   Popover,
   PopoverTrigger,
   Image,
   Text,
-  Avatar,
   Card,
   CardBody,
-  CardFooter,
-  CardHeader,
-  Flex,
   Heading,
-  IconButton,
   HStack,
+  Spinner,
 } from "@chakra-ui/react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
@@ -75,8 +70,7 @@ function GenerateNekoPanel(neko: INekor) {
 const myFont = localFont({ src: "./fonts/joyig.ttf" });
 
 function App() {
-  const [width, setWidth] = useState<number>(window.innerWidth);
-  const isMobile = width <= 768;
+  const isMobile = window.innerWidth <= 768;
 
   function HeadingAnimation() {
     const [isEnglish, setIsEnglish] = useState(true);
@@ -143,20 +137,31 @@ function App() {
   }, [loadNekors]);
 
   return (
-    <div
-      style={{
-        display: "flex",
+    <>
+      {appLoaded ? (
+        <div
+          style={{
+            display: "flex",
 
-        flexDirection: "column",
+            flexDirection: "column",
 
-        alignItems: "center",
+            alignItems: "center",
 
-        marginTop: "30px",
-      }}
-    >
-      <HeadingAnimation></HeadingAnimation>
-      {nekors.map((neko) => GenerateNekoPanel(neko))}
-    </div>
+            marginTop: "30px",
+          }}
+        >
+          <HeadingAnimation></HeadingAnimation>
+          {nekors.map((neko) => GenerateNekoPanel(neko))}
+        </div>
+      ) : (
+        <Spinner
+          justifyContent="center"
+          size="xl"
+          marginLeft="50%"
+          marginTop="50%"
+        />
+      )}
+    </>
   );
 }
 
