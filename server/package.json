@@ -1,16 +1,23 @@
 {
-  "name": "server",
+  "name": "nekor-server",
   "version": "1.0.0",
-  "description": "",
+  "description": "server for nekor",
+  "author": "Jinoo Hong, Peter Li, Xinzhe Chai & Geireann Lindfield Roberts",
   "main": "src/app.ts",
   "scripts": {
     "dev": "nodemon src/app.ts",
+    "test": "jest --runInBand",
+    "nodetest": "jest --runInBand Nodes",
+    "anchortest": "jest --runInBand Anchors",
+    "linktest": "jest --runInBand Links",
+    "labtest": "jest --runInBand insertNode && jest --runInBand createNode",
     "lint": "prettier --check . && eslint .",
     "format": "prettier --write . && eslint . --fix",
     "coverage": "jest --coverage",
     "build": "tsc",
     "prod": "node dist/src/app.js"
   },
+  "license": "MIT",
   "dependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
@@ -55,8 +62,5 @@
     "@types/mongodb": {
       "@types/bson": "4.0.5"
     }
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  }
 }
