@@ -1,0 +1,101 @@
+html,
+body,
+#__next {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Lato", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#site {
+  background-image: url("https://image.shutterstock.com/image-vector/buddhist-symbol-eternal-knot-260nw-779842435.jpg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#nature {
+  background-image: url("https://png.pngtree.com/png-vector/20191130/ourmid/pngtree-nature-icon-png-image_2055916.jpg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+#rest {
+  background-image: url("https://thumbs.dreamstime.com/b/picnic-table-icon-vector-isolated-white-background-sign-beer-symbols-transparent-134151639.jpg");
+  background-size: cover;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.mapboxgl-popup {
+  max-width: 2000px;
+  max-height: 1000px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.sidebar {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  font-size: 30px;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidebar a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.sidebar-box {
+  background-color: #ffffff;
+  padding: 20px;
+  font-size: 20px;
+  margin: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.spacer {
+  height: 25px;
+}
+
+.mapboxgl-ctrl-logo {
+  display: none !important;
+}
