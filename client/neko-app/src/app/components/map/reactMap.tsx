@@ -6,12 +6,19 @@ import { FeatureCollection } from "geojson";
 import "mapbox-gl/dist/mapbox-gl.css";
 import { INekor } from "../../types";
 
+import dotenv from "dotenv";
+
+dotenv.config();
+
 type mapProps = {
   nekor: INekor;
 };
 
 function MapboxMap(props: mapProps) {
-  const isMobile = window.innerWidth <= 768;
+  let isMobile = false;
+  if (typeof window !== "undefined") {
+    isMobile = window.innerWidth <= 768;
+  }
   // this is where the map instance will be stored after initialization
   const nekor = props.nekor;
   const [map, setMap] = useState<mapboxgl.Map>();

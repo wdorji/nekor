@@ -3,7 +3,10 @@
 import { ParallaxProvider, ParallaxBanner } from "react-scroll-parallax";
 
 export default function About() {
-  const isMobile = window.innerWidth <= 768;
+  let isMobile = false;
+  if (typeof window !== "undefined") {
+    isMobile = window.innerWidth <= 768;
+  }
 
   interface PanelProps {
     imageUrl: string;

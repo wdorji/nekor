@@ -70,7 +70,10 @@ function GenerateNekoPanel(neko: INekor) {
 const myFont = localFont({ src: "./fonts/joyig.ttf" });
 
 function App() {
-  const isMobile = window.innerWidth <= 768;
+  let isMobile = false;
+  if (typeof window !== "undefined") {
+    isMobile = window.innerWidth <= 768;
+  }
 
   function HeadingAnimation() {
     const [isEnglish, setIsEnglish] = useState(true);
