@@ -31,5 +31,5 @@ const myNekorRouter = new NekorRouter(mongoClient);
 app.use("/nekor", myNekorRouter.getExpressRouter());
 
 app.get("*", (req: Request, res: Response) => {
-  res.send("MyHypermedia Backend Service");
+  res.send("Nekor Backend Service");
 });
