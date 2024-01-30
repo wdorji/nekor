@@ -17,7 +17,6 @@ import { AnimatePresence, motion } from "framer-motion";
 import { useState, useEffect, useCallback } from "react";
 import { FrontendNekorGateway } from "./FrontendNekorGateway";
 import { INekor } from "./types";
-import localFont from "next/font/local";
 
 function GenerateNekoPanel(neko: INekor) {
   return (
@@ -67,7 +66,6 @@ function GenerateNekoPanel(neko: INekor) {
     </div>
   );
 }
-const myFont = localFont({ src: "./fonts/joyig.ttf" });
 
 function App() {
   let isMobile = false;
@@ -108,11 +106,7 @@ function App() {
                 Pick your nekor!
               </Text>
             ) : (
-              <Text
-                className={myFont.className}
-                fontSize={isMobile ? "4xl" : "8xl"}
-                as={"span"}
-              >
+              <Text fontSize={isMobile ? "4xl" : "8xl"} as={"span"}>
                 གནས་སྐོར་གདམ་ཁ་རྐྱབ་གནང།
               </Text>
             )}
@@ -161,7 +155,7 @@ function App() {
           justifyContent="center"
           size="xl"
           marginLeft="50%"
-          marginTop="50%"
+          marginTop="20%"
         />
       )}
     </>

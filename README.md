@@ -1,6 +1,6 @@
 # Nekor
 
-Nekor provides an immersive web experience to learn about sacred and historical sites across the himalayan region. This project won the first ever Global Tibetan Professionals Network North America Hackathon and here is the [devpost submission](https://devpost.com/software/neko). You can try out nekor at [https://nekor.vercel.app/](https://nekor.vercel.app/).
+Nekor provides a 3D geospatial visualization with inforgraphic trails to sacred and historical sites across the himalayan region. This project won the first ever Global Tibetan Professionals Network North America Hackathon and here is the [devpost submission](https://devpost.com/software/neko). You can try out nekor at [https://nekor.vercel.app/](https://nekor.vercel.app/).
 
 The web app is built using the MERN stack and next js framework.
 ![Landing Image](client/neko-app/readme/landing.png)

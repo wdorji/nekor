@@ -48,7 +48,7 @@ function MainMap() {
           justifyContent="center"
           size="xl"
           marginLeft="50%"
-          marginTop="50%"
+          marginTop="20%"
         />
       )}
     </>
